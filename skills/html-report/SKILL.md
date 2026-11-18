@@ -111,12 +111,12 @@ This review gate is blocking. Do not call the report complete until every profil
 ## Verification Checklist
 - [ ] Single HTML file with inline CSS/JS/SVG/data, Google Fonts `<link>`, and CSP meta (`default-src`, `connect-src`, `object-src`, `base-uri`, `form-action` `'none'`).
 - [ ] One preset fixed; no preset switcher; `data-layout` and `data-voice` set when they differ from the canonical triple; minimal header.
-- [ ] Profile classified; display weights `300`-`600` with optical sizing; prose obeys the 2-3 sentence, <= 60 word, 60ch-70ch budget.
+- [ ] Profile classified; display weights `300`-`700` (allowing 700 on display/hero headings) with optical sizing; prose obeys the 2-3 sentence, <= 60 word, 60ch-70ch budget.
 - [ ] No Tailwind CDN, no `fetch()`, no secrets; light, dark, and print (`details` expanded) work.
 - [ ] Desktop, mobile, 320px reflow, and print rendered and inspected; Shared/Print passed `ui-accessibility`; Executive passed `ux-critic`.
 
 ## Related Skills
-- Use **ux-product-shaper** to run the 5-Axis Spec-Design-Driven grill first.
+- Use **ux-product-shaper** to align the 5 design axes or apply the honored `dossier` default.
 - Use **design-system** for project tokens, component specs, theme parity, and the minimalism/YAGNI doctrine.
 - Use **ui-accessibility** for shared, interactive, or print reports; audit contrast, keyboard, focus, and table semantics.
 - Use **ux-critic** for executive or decision reports; critique hierarchy, state honesty, and microcopy.

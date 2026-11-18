@@ -1,6 +1,6 @@
 # Product, Design Discovery, and State Contracts
 
-Reference for `ux-product-shaper`. It defines the Spec-Design-Driven 5-Axis Discovery Grill, the 3 Surface Modes, the 7 Zen Aesthetic Archetypes, the 6 Layout Architectures, the 4-Lens UI/UX Brainstorm Cards, information architecture rules, the 8-state matrix, and the Zero-Decision `PRODUCT.md` template.
+Reference for `ux-product-shaper`. It defines the Spec-Design-Driven 5-Axis Discovery & Alignment (honoring the `dossier` default), the 3 Surface Modes, the 13 Aesthetic Archetypes across 4 Style Families, the 6 Layout Architectures, the 4-Lens UI/UX Brainstorm Cards, information architecture rules, the 8-state matrix, and the Zero-Decision `PRODUCT.md` template.
 
 ## 1. Surface Mode (3 Postures)
 
@@ -18,9 +18,9 @@ Reference for `ux-product-shaper`. It defines the Spec-Design-Driven 5-Axis Disc
 
 If a screen mixes incompatible postures (such as a persuasive marketing hero above a dense operational table), split it into two surfaces.
 
-## 2. The 5-Axis Spec-Design-Driven Grill Bank
+## 2. The 5-Axis Spec-Design-Driven Alignment & Honored Default
 
-During Gate 1, grill the user one question at a time (with a 1-sentence hypothesis and confidence `%`) or present an unranked 3-option trade-off table when they ask to compare options upfront. Never mark an option `(Recommended)`.
+When domain or aesthetic requirements are open, automatically apply the honored default: **`dossier`** (warm beige `#F7F4EE`, charcoal ink `#22201E`, terracotta/clay accent `#9E583B`, and Fraunces/Inter editorial typography) or its canonical Zen triple (`dossier × L1 × V1`). If the user explicitly requests exploration, customization, or non-Zen styling, or if specific domain constraints dictate alternative ergonomics, present an unranked 3-option trade-off table (never marking an option `(Recommended)`, per `rules/AGENTS.md` §2 Architecture Ownership).
 
 ### Axis 1: Surface Mode Question Template
 - **Prompt**: "Is this surface meant to persuade/narrate (`Mode A: Editorial`), execute high-density operational/analytical reading (`Mode B: Utilitarian`), or support interactive creation/inspection (`Mode C: Studio Hybrid`)? *(Hypothesis: Mode B at 80% confidence based on your benchmark tables.)*"
@@ -192,7 +192,6 @@ Save as `docs/designs/YYYY-MM-DD_product-brief_<topic>.md`.
 
 ## 8. Anti-Patterns
 
-- Silently defaulting to a single warm-beige theme without grilling the user when domain or aesthetic requirements are open.
 - Shipping the canonical triple for a job outside that palette's best-fit row.
 - Coding before the 5-Axis Design Matrix and Surface Mode are fixed.
 - Treating the happy path as the whole screen.
@@ -209,7 +208,7 @@ Save as `docs/designs/YYYY-MM-DD_product-brief_<topic>.md`.
 
 ## 9. Gate Checklist
 
-- [ ] Gate 1 Socratic grill locked all 5 design axes with the owner.
+- [ ] Gate 1 alignment locked the 5 design axes (honoring `dossier` default or custom owner selection).
 - [ ] Surface Mode recorded with a reason.
 - [ ] YAGNI exclusions list exists and bans unrequested chrome.
 - [ ] One primary CTA per view; at most 4 top-level navigation items; at most 3-4 KPIs.

@@ -22,7 +22,7 @@ Own the visual contract between product intent and implementation: tokens, palet
 - Auditing hardcoded colors, spacing, or one-off variants.
 
 ## When Not to Use
-- UX discovery, Socratic 5-axis design grilling, information architecture, or the 8-state product contract (`ux-product-shaper`).
+- UX discovery, 5-axis design alignment, information architecture, or the 8-state product contract (`ux-product-shaper`).
 - WCAG conformance audit and keyboard testing (`ui-accessibility`).
 - Writing production UI code (`html-report`, `plotly-dash`, `python-pro`, `flutter-ui-responsive-a11y`).
 - Adversarial critique of a rendered screen (`ux-critic`).
@@ -37,8 +37,8 @@ Own the visual contract between product intent and implementation: tokens, palet
 ## Workflow
 
 ### Step 1: Lock the Style Family & Archetype (13 Presets), Layout Geometry & Typographic Voice
-1. Read the product brief from `ux-product-shaper`: Surface Mode, archetype, layout, voice, audience, and constraints. If the look is open, present up to 3 unranked job-band rows from `references/composition-grammar.md`. If the look is delegated, use that file's stable task-slug rule. Emit the canonical triple only on that palette's best-fit job.
-2. **Monochrome + 1 Accent Across 4 Style Families (13 Archetypes)**: render at least 90% of the viewport from a neutral ramp paired with high-contrast ink, reserving one accent for the primary CTA, chapter index, and focus ring. Hex rows live in `references/token-and-component-specs.md`:
+1. Read the product brief from `ux-product-shaper`: Surface Mode, archetype, layout, voice, audience, and constraints. If the look is open or delegated, apply semantic intent selection (honoring `dossier` and warm Zen defaults) from `references/composition-grammar.md`. If the user requests customization, present up to 3 unranked job-band rows.
+2. **Neutral Ramp + Accents Across 4 Style Families (13 Archetypes)**: render at least 90% of the viewport from a neutral ramp paired with high-contrast ink, reserving the primary accent for the primary CTA, chapter index, and focus ring, with controlled secondary accents permitted for tags or secondary indicators. Subtle box shadows and soft border depth provide tactile card elevation. Hex rows live in `references/token-and-component-specs.md`:
    - **Zen Minimalism (7)**: `dossier`, `zen-garden`, `chronicle`, `sumi-ink`, `shoji-grid`, `aizome-indigo`, `yugen-noir`.
    - **Scientific & Plotly Grammar (3)**: `simple-white`, `plotly-white`, `ggplot2-grammar`.
    - **Platform Native Minimalism (2)**: `apple-hig`, `material-you`.
@@ -123,7 +123,7 @@ Before handoff, fail the design system if any check fails:
 ## Verification Checklist
 - [ ] Style Family & Archetype (`dossier`, `zen-garden`, `chronicle`, `sumi-ink`, `shoji-grid`, `aizome-indigo`, `yugen-noir`, `simple-white`, `plotly-white`, `ggplot2-grammar`, `apple-hig`, `material-you`, or `geist-zinc`), layout (`L1`-`L6`), and voice (`V1`-`V4`) are recorded.
 - [ ] The composition ID (`palette × layout × voice × density × primary-module`) follows `references/composition-grammar.md`.
-- [ ] Palette uses Monochrome + 1 Accent; status colors are reserved for live states.
+- [ ] Palette uses Neutral Ramp + 1 Primary Accent (Monochrome + 1 Accent baseline with controlled secondary accents permitted); status colors are reserved for live states.
 - [ ] At most 2 primary font families plus one monospace data face are declared within the 5-product or 9-editorial-role budget.
 - [ ] Three token tiers exist with at most 20-25 semantic tokens and active callers.
 - [ ] Light and dark parity is measured, not assumed.
@@ -132,7 +132,7 @@ Before handoff, fail the design system if any check fails:
 - [ ] Token export uses ISO-dated files under `docs/designs/` and names implementation/audit skills.
 
 ## Related Skills
-- Use **ux-product-shaper** for the 5-Axis Spec-Design-Driven grill, Surface Mode, and 8-state contract before tokens.
+- Use **ux-product-shaper** for the 5-Axis Spec-Design-Driven alignment, Surface Mode, and 8-state contract before tokens.
 - Use **dashboard-design** when component tokens and specs target operational or analytics monitoring dashboards.
 - Use **ui-accessibility** to audit contrast, focus, target size, and reduced motion.
 - Use **html-report** to implement the system in a single-file HTML deliverable across the 13 curated presets.

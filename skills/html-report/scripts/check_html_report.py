@@ -374,7 +374,9 @@ def _axis_failures(attrs: dict[str, str]) -> list[str]:
 
 
 def _parser_failures(parser: ReportParser) -> list[str]:
-    preset = parser.html_attrs.get("data-preset", "")
+    preset = parser.html_attrs.get("data-preset")
+    if preset is None:
+        preset = "dossier"
     checks = (
         (parser.doctype, "missing <!DOCTYPE html>"),
         (parser.meta_charset, 'missing <meta charset="utf-8">'),
@@ -487,7 +489,10 @@ def validate(path: Path) -> list[str]:
     parser = ReportParser()
     parser.feed(text)
     failures = _parser_failures(parser) + _csp_failures(parser)
-    failures += _text_failures(text, parser.html_attrs.get("data-preset", ""))
+    preset = parser.html_attrs.get("data-preset")
+    if preset is None:
+        preset = "dossier"
+    failures += _text_failures(text, preset)
     if parser.has_details and "details:not([open])" not in text.lower():
         failures.append("details present but print CSS does not expand closed details")
     if parser.has_chart:

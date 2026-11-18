@@ -1,10 +1,10 @@
 ---
 name: ux-product-shaper
 description: >-
-  Spec-design-driven UI/UX discovery and shaping: run a multi-turn Socratic
-  design grill (Gate 1 & Gate 2), lock Surface Mode (A/B/C), Style Family &
-  Archetype (13 presets across 4 families), layout geometry, wording pacing,
-  and an 8-state completeness contract before UI work. Not for token files or code.
+  Spec-design-driven UI/UX discovery and shaping: lock Surface Mode (A/B/C),
+  Style Family & Archetype (honoring warm Zen dossier default across 13 presets),
+  layout geometry, wording pacing, and an 8-state completeness contract before UI work.
+  Not for token files or code.
 risk: safe
 source: local
 date_added: "2026-10-28"
@@ -12,12 +12,12 @@ date_added: "2026-10-28"
 
 # UX Product Shaper Skill (Spec-Design-Driven UI/UX)
 
-Turn an ambiguous UI/UX request or feature intent into an owner-approved, Zero-Decision product and design brief (`PRODUCT.md`) before any token file or UI code is written. Enforce **Spec-Design-Driven UI/UX**: active Socratic interrogation across 5 design axes, unranked option presentation under Architecture Ownership (`rules/AGENTS.md` §2), four-lens UI/UX brainstorm stress-testing, essentialist information rhythm, and an 8-state completeness contract.
+Turn an ambiguous UI/UX request or feature intent into an owner-approved, Zero-Decision product and design brief (`PRODUCT.md`) before any token file or UI code is written. Enforce **Spec-Design-Driven UI/UX**: lock the 5 design axes (honoring `dossier` and warm Zen organic neutrals as the default), unranked option presentation when customization is requested under Architecture Ownership (`rules/AGENTS.md` §2), four-lens UI/UX brainstorm stress-testing, essentialist information rhythm, and an 8-state completeness contract.
 
 ## When to Use
 - Starting a new UI surface, screen, report, dashboard, or interactive flow.
 - A spec exists (`spec-driven-design`) or a prompt arrives with open visual, layout, palette, or interaction choices.
-- The user wants to be grilled back-and-forth to lock layout, style family, typography, and states before coding.
+- The user wants to lock layout, style family, typography, and states before coding.
 - A design review keeps finding missing states, aesthetic drift, or unclear flows.
 
 ## When Not to Use
@@ -37,10 +37,10 @@ Turn an ambiguous UI/UX request or feature intent into an owner-approved, Zero-D
 ### Step 0: Intake & Context Grounding
 Read predecessor artifacts in order: explicit design/spec path (`docs/designs/`), existing brand/token files, then interactive chat. Identify which of the 5 Spec-Design-Driven axes are already constrained and which remain open.
 
-### Step 1: Gate 1 — The 5-Axis Spec-Design-Driven Socratic Grill
-Do not silently auto-pick a theme or layout when requirements are open. Grill the user with **one focused question per turn** (attaching a 1-sentence hypothesis and confidence `%`), or present an **unranked 3-option comparison table** (with mechanism, trade-off, and failure mode — no `(Recommended)` label, per `rules/AGENTS.md` §2 Architecture Ownership) across any unresolved axis (full 13-archetype catalog in `references/product-and-state-contracts.md`):
+### Step 1: Gate 1 — Design Axis Alignment & Honored Zen Default
+When domain or aesthetic requirements are open, automatically apply the honored default: **`dossier`** (warm beige `#F7F4EE`, charcoal ink `#22201E`, terracotta/clay accent `#9E583B`, and Fraunces/Inter editorial typography) or its canonical Zen triple (`dossier × L1 × V1`). If the user explicitly requests exploration, customization, or non-Zen styling, or if specific domain constraints dictate alternative ergonomics, present an **unranked 3-option comparison table** (with mechanism, trade-off, and failure mode — no `(Recommended)` label, per `rules/AGENTS.md` §2 Architecture Ownership) across any unresolved axis (full 13-archetype catalog in `references/product-and-state-contracts.md`):
 
-| Axis | Decision to Lock | Unranked Options to Grill User On |
+| Axis | Decision to Lock | Unranked Options When Customization Is Requested |
 | :--- | :--- | :--- |
 | **1. Surface Mode** | Primary user posture | **Mode A: Swiss / Zen Editorial** (persuade/narrate, >= 40% *Ma*) · **Mode B: Shibumi Utilitarian** (operate/read, high data-ink, tabular precision) · **Mode C: Shoji / Studio Hybrid** (create/inspect, split canvas + context rail) |
 | **2. Style Family & Archetype** | Visual family & palette (13 presets across 4 families) | **Zen (7)**: `dossier`, `zen-garden`, `chronicle`, `sumi-ink`, `shoji-grid`, `aizome-indigo`, `yugen-noir` · **Scientific (3)**: `simple-white`, `plotly-white`, `ggplot2-grammar` · **Platform (2)**: `apple-hig`, `material-you` · **Monochrome (1)**: `geist-zinc` |
@@ -48,10 +48,10 @@ Do not silently auto-pick a theme or layout when requirements are open. Grill th
 | **4. Typographic Voice** | Font pairing mood (<= 2 primary + 1 mono) | **`V1: editorial-authority`** (`Fraunces`/`Newsreader` + `Inter`) · **`V2: classical-lyrical`** (`Cormorant Garamond`/`Instrument Serif` + `Plus Jakarta Sans`) · **`V3: technical-shibumi`** (`IBM Plex Sans`/`Space Grotesk` + `IBM Plex Mono`) · **`V4: humanist-clarity`** (`DM Sans`/`Inter` + `JetBrains Mono`) |
 | **5. Density & Chrome** | Pacing & YAGNI exclusions | **Contemplative** (`5.25rem` pad, zero filter chrome) · **Balanced Editorial** (`3.5rem` pad, inline table search) · **High-Density Operational** (`1.5rem-2rem` pad, keyboard shortcuts, anomaly badges) |
 
-**Grill Rules**:
-1. Stop asking when you can predict the owner's reaction to the next three questions.
-2. Accept only an explicit confirmation (`yes`, or explicit option selection like `Mode B + plotly-white + L5 + V4`). Silence does not lock Gate 1 unless preset selection is explicitly delegated.
-3. When the owner delegates the look, follow the **design-system** composition grammar: job band, a recorded product+band composition, or the stable task-slug index. Record the composition ID and one primary-module sentence. A named axis stays fixed. Do not default to `dossier` + `L1` + `V1`.
+**Alignment Rules**:
+1. When requirements are open, proceed directly with the honored Zen default (`dossier × L1 × V1`) without blocking the user.
+2. If the user explicitly requests customization or comparison, present up to 3 unranked options per unresolved axis.
+3. When the owner delegates the look or context indicates a specific job band, select by semantic intent from the composition grammar, defaulting to the honored Zen palette (`dossier`, `zen-garden`, `chronicle`, `sumi-ink`) while adapting to user context.
 4. Halt immediately on contradictory requirements under the Contradiction Halt rule in `rules/AGENTS.md` §2. State the tension and ask the owner to split the surfaces or pick one posture.
 
 ### Step 2: Classify Surface Mode & Enforce YAGNI / Kanso Scope
@@ -94,21 +94,21 @@ Use the template in `references/product-and-state-contracts.md`. Save the brief 
 Hand the brief to `design-system` for tokens, component specs, and responsive rules, or to `html-report` / `dashboard-design` when using a built-in preset. Do not start visual styling or implementation in this skill.
 
 ## Rules
-- Never silently guess an aesthetic archetype, layout architecture, or surface mode when the prompt leaves them open; run the Gate 1 Socratic grill first.
-- Present multi-path design choices as unranked options (up to 3 per axis, no `(Recommended)` tag).
+- Honor `dossier` and warm Zen organic neutrals as the default when domain/aesthetic requirements are open; present unranked design options only when the user explicitly requests customization or when domain constraints dictate alternative ergonomics.
+- Present multi-path design choices as unranked options (up to 3 per axis, no `(Recommended)` tag) when customization is requested.
 - No Lorem Ipsum, John Doe, or fake numeric placeholders.
 - No unrequested navigation, search, filter, account, or export chrome.
 - No loading state that is visually indistinguishable from disabled.
 - No error signaled by color alone.
 - No implementation before the 5-Axis Design Matrix and the 8-state matrix are fixed.
 - **Lazy, Not Negligent**: YAGNI removes speculative chrome and abstraction, never the 8 states, validation, WCAG 2.2 AA, or 24x24px targets.
-- Ask one open-ended question at a time during intake.
+- Ask one open-ended question at a time during intake when customization is needed.
 - Stop on contradictory requirements under the Contradiction Halt rule in `rules/AGENTS.md` §2.
 
 ## Verification Checklist
-- [ ] Gate 1 resolved all 5 design axes by owner confirmation, or by the delegated composition rule.
+- [ ] Gate 1 resolved all 5 design axes (by honoring `dossier` default or custom owner selection).
 - [ ] Surface Mode (`Mode A`, `Mode B`, or `Mode C`) is recorded and justified.
-- [ ] The composition ID is recorded. A delegated look uses the job band, not the canonical triple, unless that job is the palette's best fit.
+- [ ] The composition ID is recorded.
 - [ ] A YAGNI exclusions list exists and bans unrequested chrome.
 - [ ] Each screen has one named focal point and one primary CTA.
 - [ ] Section leads (`<= 25 words`) and paragraphs (`2-3 sentences`, `<= 60 words`) obey *Kanso* and *Ma* wording budgets.
