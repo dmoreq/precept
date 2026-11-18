@@ -109,8 +109,8 @@ precept/
 | **`tech-research`** | SOTA methods, benchmark evaluation, and conditional recommendations before implementation. |
 | **`technical-reporting`** | Saved formal markdown: benchmarks, ADRs, Mermaid, asset paths. Not Plotly charts or QBR narrative. |
 | **`ui-accessibility`** | Audit WCAG 2.2 AA, keyboard and focus models, ARIA, contrast, target size, and false minimalism. |
-| **`ux-critic`** | Red-team rendered UI with Dieter Rams, heuristic critique, 5-axis design compliance, a subtraction pass, and one required deletion. |
-| **`ux-product-shaper`** | Spec-design-driven UI/UX discovery: 5-axis Socratic grill (Gate 1 & Gate 2), Surface Mode (A/B/C), Zen archetype, layout geometry, and 8-state contract. |
+| **`ux-critic`** | Red-team rendered UI with Dieter Rams, heuristic critique, 5-axis design compliance, and intentional subtraction pass (evaluating deletion only where noise exists). |
+| **`ux-product-shaper`** | Spec-design-driven UI/UX discovery: 5-axis design alignment (honoring warm Zen dossier default across 13 presets), Surface Mode (A/B/C), layout geometry, and 8-state contract. |
 | **`verify-and-stop`** | Disciplined execution and termination protocol. Verifies minimal acceptance criteria with a single decisive check, presents proof, and stops immediately without runaway loops. |
 
 ---

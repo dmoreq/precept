@@ -59,7 +59,7 @@ Pass conditions:
 - Helper text appears before the mistake, not after.
 - The same concept uses one term throughout.
 - Body paragraphs stay at 2-3 sentences (`<= 60 words`) with one job each.
-- Display weights stay at 300-400 (or 500 for sans-dominant `V3`/`V4`); UI labels use 500; emphasis uses 600; 700 is absent.
+- Display weights stay at 300-600 (allowing 700 on display/hero headings for bold expressiveness); UI labels use 500; emphasis uses 600.
 - Body prose is at least 0.9375rem, labels at least 0.75rem, and code at least 0.82rem.
 - Numeric columns, deltas, and axes use tabular numerals.
 - Chart labels are readable and non-overlapping: percentages use two decimals, counts are abbreviated, and exact values remain in the table.
@@ -69,7 +69,7 @@ Failure signals:
 - Two names for the same object.
 - A destructive action labeled like a safe one.
 - A wall-of-text paragraph, or the same idea repeated across paragraphs.
-- A 700-weight display heading, 0.7rem labels, or proportional numeric columns.
+- Uncontrolled display weights (>700), 0.7rem labels, or proportional numeric columns.
 - Integer-only percent labels, overlapping chart labels, or a chart that hides exact values from keyboard users.
 
 ### 1.5 Mode Fit and Zen Archetype Fidelity
@@ -185,7 +185,7 @@ Save as `docs/reports/YYYY-MM-DD_ux-critique_<topic>.md`.
 
 ## The One Deletion
 
-- **THE ONE DELETION**: <single element, wrapper, or control to remove completely>
+- **THE ONE DELETION**: <single element, wrapper, or control to remove completely, or "None (composition is balanced and noise-free)">
 - Reason: <why this is the highest-leverage deletion>
 
 ## Findings

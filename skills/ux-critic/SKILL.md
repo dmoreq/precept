@@ -99,7 +99,7 @@ The report contains:
 - A two-sentence verdict.
 - `Keep`: 1-2 elements that already exemplify "less, but better".
 - Findings ordered by severity, each with the dimension, heuristic, evidence, and the steering command.
-- `**THE ONE DELETION**`: the single highest-leverage element, wrapper, or control to remove completely.
+- `**THE ONE DELETION**`: if clutter, decorative noise, or unrequested chrome exists, name the single highest-leverage element to remove. If the composition is already balanced, noise-free, and elegant, explicitly record that no deletion is required; do not eliminate intentional visual flair, subtle depth, or expressive typography.
 - A prioritized fix list. Do not edit the code.
 - A final ship recommendation: `Ship`, `Ship with fixes`, or `Do not ship`.
 
@@ -108,7 +108,7 @@ The report contains:
 - Do not invent metrics or screenshots. If evidence is missing, request it.
 - Do not propose a redesign when a targeted steering command fixes the issue.
 - Do not polish before the subtraction pass.
-- Name exactly one `**THE ONE DELETION**` in every critique.
+- Do not force `**THE ONE DELETION**` to eliminate visual flair, subtle depth, or expressive accents when the composition is balanced and elegant; record "None (composition is balanced and noise-free)" instead.
 - Do not contradict the product brief's Surface Mode or recorded composition. A legal mix is not a defect. An illegal mix from the **design-system** composition grammar is a defect.
 - Do not override an accessibility failure with a visual preference.
 - Do not accept false minimalism: missing signifiers, focus, labels, or states.
@@ -123,7 +123,7 @@ The report contains:
 - [ ] The subtraction pass ran before polish.
 - [ ] Chart interaction was checked: focusable marks, readable non-overlapping labels, and chart-to-table cross-highlight.
 - [ ] Every finding names a steering command.
-- [ ] `**THE ONE DELETION**` is named.
+- [ ] `**THE ONE DELETION**` is evaluated (naming the single item to drop, or explicitly noted as none needed).
 - [ ] The report uses an ISO-dated path under `docs/reports/`.
 - [ ] The ship recommendation is explicit.
 

@@ -31,7 +31,7 @@ Any one of these blocks delivery:
 - A missing or invalid Content-Security-Policy meta, or a CSP directive that permits an unapproved origin.
 - A credential-shaped string in the report; report the pattern class only, never the value.
 - Print output with clipped content, visible chrome, or collapsed `<details>`.
-- More than two non-monospace font families, or more than one decorative accent outside status and chart palettes.
+- More than two non-monospace font families, or uncontrolled competing primary accents (controlled secondary accents permitted for tags/depth).
 - Nested bordered or shadowed cards, more than one card radius, or KPI cards in one row with visibly unequal heights.
 
 ### Craft Minimums

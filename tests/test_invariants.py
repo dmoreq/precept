@@ -717,7 +717,7 @@ def test_html_report_validator_css_and_preset_parsing(tmp_path):
 
 
 def test_html_report_validator_accepts_composition_axes(tmp_path):
-    """A non-canonical layout and voice pass. An unknown layout fails."""
+    """A non-canonical layout and voice pass. An unknown layout fails. Omitted preset honors dossier."""
     mixed = HTML_REPORT_FIXTURE.replace(
         '<html lang="en" data-preset="dossier" data-theme="light">',
         '<html lang="en" data-preset="aizome-indigo" data-layout="L4" '
@@ -728,6 +728,13 @@ def test_html_report_validator_accepts_composition_axes(tmp_path):
     )
     passed = _run_html_report_validator(tmp_path, mixed)
     assert passed.returncode == 0, passed.stdout + passed.stderr
+
+    omitted = HTML_REPORT_FIXTURE.replace(
+        '<html lang="en" data-preset="dossier" data-theme="light">',
+        '<html lang="en" data-theme="light">',
+    )
+    passed_omitted = _run_html_report_validator(tmp_path, omitted)
+    assert passed_omitted.returncode == 0, passed_omitted.stdout + passed_omitted.stderr
 
     unknown = HTML_REPORT_FIXTURE.replace(
         '<html lang="en" data-preset="dossier" data-theme="light">',
@@ -751,14 +758,43 @@ def test_composition_grammar_present():
         "native-consumer",
         "developer-console",
         "data-layout",
-        "task slug",
-        "SHA-256",
-        "close-brief",
-        "latency-wall",
+        "semantic intent",
+        "dossier",
+        "700",
+        "secondary accent",
+        "box shadows",
     ):
         assert marker in text, f"composition grammar missing '{marker}'"
     skill = (SKILLS_DIR / "design-system" / "SKILL.md").read_text(encoding="utf-8")
     assert "references/composition-grammar.md" in skill
+
+
+def test_zen_defaults_and_expressiveness():
+    """Verify warm Zen defaults across all job bands, font-weight 700 expressiveness, and flexible deletion pass."""
+    grammar_text = (
+        SKILLS_DIR / "design-system" / "references" / "composition-grammar.md"
+    ).read_text(encoding="utf-8")
+    for band in (
+        "editorial-brief",
+        "long-form",
+        "ops-monitor",
+        "quant-surface",
+        "studio-night",
+        "native-consumer",
+        "developer-console",
+    ):
+        band_lines = [line for line in grammar_text.splitlines() if f"`{band}`" in line]
+        assert band_lines, f"Job band '{band}' not found in composition grammar"
+        assert "dossier" in band_lines[0], f"Job band '{band}' does not include dossier"
+
+    shaper_text = (
+        SKILLS_DIR / "ux-product-shaper" / "references" / "product-and-state-contracts.md"
+    ).read_text(encoding="utf-8")
+    assert "honored default" in shaper_text.lower()
+    assert "dossier" in shaper_text
+
+    critic_text = (SKILLS_DIR / "ux-critic" / "SKILL.md").read_text(encoding="utf-8")
+    assert "None (composition is balanced and noise-free)" in critic_text
 
 
 def test_html_report_validator_rejects_secrets(tmp_path):

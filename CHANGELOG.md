@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.3.0] - 2026-11-18
+
+### Changed
+- **Honored Zen Minimalism Default (`ux-product-shaper`, `design-system`)**: Restored `dossier` and warm Zen organic neutrals (`#F7F4EE`, `#22201E`, terracotta/clay accent, Fraunces/Inter typography) as the honored default across UI design skills when domain or aesthetic requirements are open. Removed the anti-pattern penalizing silent warm-beige defaults, and softened Gate 1 from a mandatory multi-axis grill into an alignment pass that prompts only upon explicit user request.
+- **Composition Grammar & Job Bands (`design-system`, `html-report`)**: Opened Zen Minimalism presets (`dossier`, `zen-garden`, `chronicle`, `sumi-ink`) across all 7 job bands including `ops-monitor`, `quant-surface`, `developer-console`, and `native-consumer`. Replaced rigid deterministic `SHA-256(task-slug)` hashing with semantic context matching.
+- **Visual Expressiveness & Typographic Hierarchy (`design-system`, `html-report`, `ux-critic`)**: Relaxed the rigid 70% non-creative rule to permit font weight `700` on display/hero headings (`--font-display`), soft box shadows, and controlled secondary accents for badges and depth. Updated `ux-critic` to make `THE ONE DELETION` selective rather than mandatory, preserving intentional brand identity and visual flair while upholding WCAG 2.2 AA accessibility.
+- **Invariant Verifiers & CI Suites (`tests/test_invariants.py`, `check_html_report.py`)**: Added `test_zen_defaults_and_expressiveness()` verifying `dossier` legality across all job bands and expressiveness markers, updated HTML report validation for display weight 700 and secondary tag accents.
+
 ## [4.2.1] - 2026-11-13
 
 ### Added
